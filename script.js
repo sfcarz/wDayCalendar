@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    let m = moment();
+    let time = moment().format('h a')
+    let now = moment().format('dddd, MMMM Do');
+    console.log(time);
+    console.log(now);
 
-    let longDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-    let random = moment().format(' M D Y, h:mm '); 
-    let lt = moment().format('h a');
-    let h = moment().toDate();
-    // var timer = moment.duration(1000).timer({ start: true }, callback);
+      $('#col-1').text(time).addClass('text-secondary')
+      $('#currentDay').text(now).addClass('display-4 text-light')
 
-      console.log(lt);
+
 
 
     // console.log(`${m.toString()}`);
@@ -19,12 +19,17 @@ $(document).ready(function () {
 
 
 
-
 });
 
 
- // August 13th 2020, 4:41:22 pm
-// moment().format('dddd');                    // Thursday
-// moment().format("MMM Do YY");               // Aug 13th 20
-// moment().format('YYYY [escaped] YYYY');     // 2020 escaped 2020
-                        
+
+
+let $container = $('#container')
+
+let $row = $('<row>');
+
+let $div1 = $('<col-1>');
+let $div10 = $('<col-10>');
+let $input = $('<input>');
+let $divEnd = $('<div-end>');
+let $btn = $('<btn>');
